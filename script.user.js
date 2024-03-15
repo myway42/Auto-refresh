@@ -1,8 +1,10 @@
 // ==UserScript==
 // @name         Auto refresh
+// @name:zh-CN   自动刷新
+// @description  Automatically refresh current page with required number of times.
+// @description:zh-CN  自动刷新当前页面所需的次数。
 // @namespace    myway42.auto-refresh
-// @version      0.0.1
-// @description  Automatic refresh required number of times
+// @version      0.0.2
 // @author       myway42
 // @homepage     https://github.com/myway42/Auto-refresh
 // @license      MIT
