@@ -4,7 +4,7 @@
 // @description  Automatically refresh current page with required number of times.
 // @description:zh-CN  自动刷新当前页面所需的次数。
 // @namespace    myway42.auto-refresh
-// @version      0.0.3
+// @version      0.0.4
 // @author       myway42
 // @homepage     https://github.com/myway42/Auto-refresh
 // @license      MIT
@@ -15,10 +15,11 @@
 // ==/UserScript==
 (function() {
     'use strict';
-    let t = GM_getValue("refreshTime");
+    const ORIGIN = window.location.href;
+    let t = GM_getValue(ORIGIN);
     if (!t) t = +prompt("Enter refresh times", "refresh times");
     if (!(typeof t === 'number' && t > 0)) return;
     t--;
-    GM_setValue("refreshTime", t);
+    GM_setValue(ORIGIN, t);
     window.location.reload();
 })();
